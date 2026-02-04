@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "npm run build && gh-pages -d out"
+    "deploy": "next build && echo > out/.nojekyll && gh-pages -d out -t"
   },
   "dependencies": {
     "@mantine/core": "^8.3.14",
