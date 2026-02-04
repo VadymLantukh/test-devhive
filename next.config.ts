@@ -1,8 +1,5 @@
 import type { NextConfig } from 'next';
 
-const repoName = 'test-devhive';
-const isProd = process.env.NODE_ENV === 'production';
-
 const nextConfig: NextConfig = {
   output: 'export',
 
@@ -10,7 +7,8 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
 
-  basePath: isProd ? `/${repoName}` : '',
+  basePath: '/test-devhive',
+  trailingSlash: true,
 };
 
 export default nextConfig;
